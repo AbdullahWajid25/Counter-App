@@ -5,37 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter App</title>
+
+    <title>Passenger Counter</title>
+
+    <link rel="shortcut icon" href="/Project/Counter App/android-chrome-256x256.png" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <!-- Heading 1 -->
-    <h1 id="heading1">--- Counter ---</h1>
+    <h1 id="heading1"> Passenger Counter </h1>
 
     <!-- Number of passengers -->
     <p id="count-el">0</p>
 
-    <!-- Increment button -->
-    <div class="cont">
+    <!-- ========= Increment button ========= -->
+    <div class="cont1" id="incrementCont">
         <button id="incrementBtn" onclick="increment()">INCREMENT</button>
     </div>
 
-    <!-- Save button -->
-    <div class="cont">
-        <button id="saveBtn" onclick="save()">SAVE</button>
+    <!-- ========= Save button ========= -->
+    <div class="cont1" id="saveCont">
+        <button id="saveBtn" onclick="save()">SAVE & SUM</button>
     </div>
 
-    <!-- Sum button button -->
-    <!-- <div class="cont">
-        <button id="sumBtn" onclick="sum()">SUM</button>
-    </div> -->
-
     <!-- Previous entries: -->
-    <p id="save-el">Saved :&nbsp;</p>
+    <p id="save-el">Previous Entries : </p>
 
     <!-- Sum -->
-    <!-- <p id="sum-el">Sum :</p> -->
+    <p id="sum-el">Total :</p>
 
     <!-- JavaScript -->
     <script src="source.js"></script>

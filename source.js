@@ -1,66 +1,29 @@
-// Increment:
+//^ Passenger Counter :
+
+//& Selecting the count, previous entries and sum paragraphs:
 let countEl = document.getElementById("count-el")
-let count = 0
-function increment() {
-    count += 1
-    countEl.innerText = count
-}
-
-// Save:
 let saveEl = document.getElementById("save-el")
-function save() {
-    let entries = count + " - "
-    saveEl.textContent += entries
-    // textContent = innerText
-    count = 0
-    countEl.innerText = count
+let sumEl = document.getElementById("sum-el")
 
-    // saveEl.innerText = saveEl.innerText + entries
+//& Making variables:
+let count = 0
+let saved = 0
+let sumed = 0
+
+//& Increment function:
+function increment() {
+    count = count + 1
+    countEl.textContent = count
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Practice:
-//? 1. (Strings)
-let string1 = "This is a string!"
-console.log(string1)
-
-//? 2. (Concatinating strings)
-let string2 = "This is a string" + " and this is a combined string!(starting from 'and')"
-console.log(string2)
-
-//? 3. (Just practice)
-let name1 = "Abdullah"
-let greeting1 = "Hi, my name is "
-let myGreeting = greeting1 + name1
-console.log(myGreeting + "! (string practice)")
-
-//? 4. (Just practice)
-let welcomeEl = document.getElementById("welcome-el")
-let name2 = "Abdullah"
-let greeting2 = "Welcome back, "
-
-welcomeEl.innerText = greeting2 + name2
-//! Using += operator to concatinate :
-welcomeEl.innerText += " 👋"
-
-
+//& Save and Sum function:
+function save() {
+    if (count != 0) {
+        saveEl.textContent = saveEl.textContent + count + " - "
+        saved = count
+        count = 0
+        countEl.textContent = count
+        sumed = sumed + saved
+        sumEl.textContent = "Sum : " + sumed
+    }
+}
